@@ -17,4 +17,146 @@
     --roboto-font:'Roboto', san-serif;
     --mono-font: 'Roboto Mono', monospace;
     --font-japanese: 'Noto Sans JP', sans-serif;
+
+    --fs-h1:2.75rem;
+    --fs-h2:2.75rem;
+    --fs-lg:1.125rem;
+    --fs-base:1rem;
+    --fs-sm:0.875rem;
+    --fs-xs:0.75rem;
+    
+    /*=============FONT WEIGHT===============*/
+
+    --medium:500;
+    --semibold:600;
+    --bold:700;
+    
+    /*=============Css Base===============*/
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+
+    html{
+        scroll-behavior: smooth;
+    }
+    body, button, input, textarea{
+        font-family: var(--roboto-font);
+        font-size: var(--fs-base);
+    }
+    body{
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-break: 1.5;
+
+    }
+    h1, h2, h3{
+        font-family: var(--mono-font);  
+        font-weight: var(--bold);
+        color: var(--title-color);
+        line-height: 1.2;
+        
+    }
+
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    button{
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    img{
+        max-width: 100%;
+    }
+    textarea, input{
+        background: none;
+        border: none;
+        outline: none;
+
+    }
+
+    /*===============ESTILOS REUSABLES=============*/
+    
+    /*.container{
+        background: red;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding-left: 0.9rem;
+        padding-bottom: 0.9rem;
+    }*/
+
+    .grid{
+        display: grid;
+    }
+    .section{
+        padding-top: 3.75rem;
+        padding-bottom: 3.75rem;
+    }
+    
+    /*Header*/
+
+    .header{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+;
+    }
+    .nav{
+        /*background-color: red;*/
+        height: calc(var(--header-height)+ 00.875rem);
+        display: flex;
+        align-items: flex-end;
+    }
+    .nav__togle{
+        display: none;
+    }
+    .nav__list{
+        display: flex;
+        column-gap: 2rem;
+        padding-bottom: 0.5rem;
+    }
+    .nav__links{
+        font-size: 0.9rem;
+        color: rgb(3, 121, 255);
+        font-size: 0.9rem;
+        font-weight: var(--bold);
+        font-family: var(--mono-font);
+        text-transform: uppercase;
+        position: relative;
+        transition: 0.3s ;
+    }
+    .nav__links:hover{
+        color: var(--primary-color);
+        opacity: 0.5;
+        transform: translateY(-0.25rem);
+        
+    }
+
+    .nav__links::after{
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: 0.3s;
+    }
+    .nav__links:hover::after{
+        width: 100%;
+    }
+    
+    
 }
